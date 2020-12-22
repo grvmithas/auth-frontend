@@ -18,12 +18,10 @@ export async function signinApi(email,password){
   }
 }
 
-export async function signupApi(name,email,password){
+export async function signupApi(form){
   try{
     const {data,error}= await axiosInstance.post(SIGNUP_URL,{
-      name,
-      email,
-      password,
+      ...form
     })
     return {data,error}
   }

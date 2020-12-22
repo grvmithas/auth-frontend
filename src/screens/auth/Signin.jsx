@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {ERORR_MESSAGES} from '../../constants'
 import authApi from '../../api/auth'
 import './auth.css'
+import { Link } from 'react-router-dom'
 
 function Signin() {
 
@@ -74,6 +75,7 @@ function Signin() {
         className={apiRes.loading?'loading':''}
       >
         <div className="header">Login</div>
+        <Link to='/signup'>New user? Signup</Link>
         <input
           name="email"
           type="email"

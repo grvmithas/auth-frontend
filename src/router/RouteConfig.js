@@ -31,6 +31,7 @@ export  function RouteConfig() {
           <Route
             key={'root'}
             path={'/'}
+            exact
             component={SignInScreen}
           /> 
           {routes.map((route) => (
